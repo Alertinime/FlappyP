@@ -9,7 +9,6 @@ class Player:
         self.pos = [(self.window_large - self.image.get_width()) // 2, (self.window_haut - self.image.get_height()) // 2]
         self.jump = 0
         self.jump_up = 0
-        self.jump_down = 5
         self.asjump = False
     def render(self):
         self.window.blit(self.image,self.pos) 
@@ -22,7 +21,6 @@ class Player:
                 self.jump = self.jump_up
                 self.pos[1] = self.pos[1] - (5 *self.jump)
             else:
-                self.jump_down = 5
                 self.jump_up = 0
                 self.jump = 0
                 self.asjump = False
