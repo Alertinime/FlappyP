@@ -10,11 +10,13 @@ class Player:
         self.jump = 0
         self.jump_up = 0
         self.asjump = False
+        self.fallspeed = 1
     def render(self):
         self.window.blit(self.image,self.pos) 
-        self.pos[1] = self.pos[1] + 10
-
+        self.pos[1] = self.pos[1] + (5*self.fallspeed)
+        self.fallspeed += 1
     def jumping(self):
+        self.fallspeed = 1
         if self.asjump:
             if self.jump_up <=5:
                 self.jump_up +=1
