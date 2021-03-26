@@ -1,6 +1,6 @@
 import pygame,sys
 from Game import Game
-res = (800,640)
+res = (576,1024)
 clock = pygame.time.Clock()
 frame = 0
 pygame.init()

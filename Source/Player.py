@@ -11,9 +11,11 @@ class Player:
         self.jump_up = 0
         self.asjump = False
         self.fallspeed = 1
+        self.hitbox = self.image.get_rect(center=(self.image.get_width(),self.image.get_height())) #création du rectangle (fonctionne pas trop)
     def render(self):
         self.window.blit(self.image,self.pos) 
         self.pos[1] = self.pos[1] + (5*self.fallspeed)
+        #self.hitbox.centerer += self.fallspeed  #rendu du rectangle (utile ?)
         self.fallspeed += 1
     def jumping(self):
         self.fallspeed = 1
