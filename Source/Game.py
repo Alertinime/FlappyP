@@ -1,5 +1,6 @@
 import pygame
 from Player import Player
+from Obstacles import Obstacles
 class Game:
     def __init__(self,windows,res):
         self.res = res
@@ -7,10 +8,12 @@ class Game:
         self.running = True
         self.player = Player(self.windows,res)
         self.wall = pygame.image.load("../img/wall.jpg").convert_alpha()
+        self.obs = Obstacles(self.windows,res)
 
     def render(self):
         self.windows.blit(self.wall, (0,0))
         self.player.render()
+        self.obs.render()
         pygame.display.flip() 
 
     def event(self):

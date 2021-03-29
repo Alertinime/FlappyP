@@ -30,4 +30,3 @@ class Player:
                 self.jump_up = 0
                 self.jump = 0
                 self.asjump = False
-            print(self.jump)
